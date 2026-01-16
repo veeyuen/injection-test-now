@@ -2,28 +2,33 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Injection Diff Demo (Schema-Matched)</title>
+  <title>Injection Diff Guarantee Page</title>
 </head>
 <body>
-  <h1>Injected Current Metrics (Schema-Matched)</h1>
-  <p id="marker">INJECTION_DIFF_SCHEMA_MATCH_2026_01_16</p>
+  <h1>Injected Current Metrics (Diff Guarantee)</h1>
+  <p id="marker">INJECTION_DIFF_GUARANTEE_2026_01_16</p>
 
-  <!-- Match: global_ev_chargers_2040__unit_count (unit_family=magnitude, unit=M) -->
-  <p><strong>Global EV chargers (2040):</strong> 60.0 million chargers</p>
+  <!-- Match Analysis canonical intent: 2024_global_ev_sales__unknown -->
+  <p><strong>2024 Global EV Sales:</strong> 18.5 million units</p>
+  <p>Global electric vehicle sales in 2024 were 18.5 million units.</p>
 
-  <!-- Match: global_ev_charging_investment_2040__currency (unit_family=currency, unit=USD/B) -->
-  <p><strong>Global EV charging investment (2040):</strong> US$ 2.4 trillion</p>
+  <!-- Match Analysis canonical intent: market_share_2024__percent -->
+  <p><strong>Market Share (2024):</strong> 20.1%</p>
+  <p>EV market share in 2024 was 20.1% of the light-vehicle market.</p>
 
-  <!-- Match: global_ev_chargers_cagr_2026_2040__percent (unit_family=percent, unit=%)
-       Avoid listing "2026" or "2040" as standalone numbers -->
-  <p><strong>Global EV charging infrastructure CAGR (2026–2040):</strong> 7.5%</p>
+  <!-- Match Analysis canonical intent: revenue_2026__currency -->
+  <p><strong>Revenue (2026):</strong> US$ 1020.0 bn</p>
+  <p>Global EV market revenue in 2026 is projected at US$ 1020.0 billion (US$ 1020.0 bn).</p>
 
-  <!-- Match: global_ev_sales_ytd_2025__unit_sales (unit_family=magnitude, unit=M) -->
-  <p><strong>Global EV sales (YTD 2025):</strong> 22.9 million units</p>
+  <!-- Match Analysis canonical intent: china_2024_sales__unknown -->
+  <p><strong>China 2024 Sales:</strong> 11.8 million units</p>
+  <p>China electric vehicle sales in 2024 were 11.8 million units.</p>
 
-  <!-- Helpful extra binding words -->
+  <!-- Extra binding context (safe, helps scoring) -->
   <p style="display:none">
-    worldwide global EV charging infrastructure chargers investment capex spending CAGR percent YTD sales million units
+    global worldwide china 2024 2026
+    electric vehicle EV sales market share revenue
+    million units percent % US$ USD bn billion
   </p>
 </body>
 </html>
